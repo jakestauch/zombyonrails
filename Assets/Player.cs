@@ -11,8 +11,12 @@ public class Player : MonoBehaviour {
     [Tooltip("In m")] [SerializeField] float xRange = 5f;
     [Tooltip("In m")] [SerializeField] float yRange = 3f;
 
-    [SerializeField] float pitchStrength = -5f;
+    [SerializeField] float positionPitchFactor = -5f;
+    [SerializeField] float controlPitchFactor = -20f;
+    [SerializeField] float positionYawFactor = 6f;
+    [SerializeField] float controlRollFactor = -30f;
 
+    float xThrow, yThrow; 
 
     // Use this for initialization
     void Start () 
@@ -31,8 +35,8 @@ public class Player : MonoBehaviour {
     {
         Vector3 currentPosition = transform.localPosition;
 
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
         float xOffset = xThrow * xSpeed * Time.deltaTime;
         float yOffset = yThrow * ySpeed * Time.deltaTime;
@@ -48,9 +52,12 @@ public class Player : MonoBehaviour {
 
     private void ProcessRotation()
     {
-        float pitch = transform.localPosition.y * pitchStrength;
-        float yaw = 0f;
-        float roll = 0f;
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDuetoControlThrow = yThrow * controlPitchFactor;
+       
+        float pitch = pitchDueToPosition + pitchDuetoControlThrow;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xThrow * controlRollFactor; 
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
