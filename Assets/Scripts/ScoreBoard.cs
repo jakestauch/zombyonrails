@@ -21,7 +21,7 @@ public class ScoreBoard : MonoBehaviour {
     {
        
     }
-
+    //I'VE ADDED CODE
     public void ScoreHit(int hitValue)
     {
         score = score + hitValue;
