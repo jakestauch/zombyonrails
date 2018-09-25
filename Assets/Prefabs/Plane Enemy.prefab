@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4974700414225430}
   - component: {fileID: 33101896677520740}
   - component: {fileID: 23649204552039072}
-  - component: {fileID: 65152765359421254}
+  - component: {fileID: 114381102985724516}
   m_Layer: 0
   m_Name: Plane Enemy
   m_TagString: Untagged
@@ -36,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902161039353048}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 412.5, y: 5.9, z: 249.7}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 553.47003, y: -17.320004, z: 631.32}
+  m_LocalScale: {x: 10, y: 10, z: 10.000004}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,15 +84,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902161039353048}
   m_Mesh: {fileID: 4300006, guid: ec2ed6fafcc53c64ba923b9ef7d5749f, type: 3}
---- !u!65 &65152765359421254
-BoxCollider:
+--- !u!114 &114381102985724516
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902161039353048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6627084, y: 0.48463184, z: 0.1403246}
-  m_Center: {x: 0, y: 0, z: -0.0000000037252903}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f14014a71544a79ad6040943f6ee62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1012212219588434, guid: fd4ca05a3617d4f7fa7e4b65e3312c11, type: 2}
+  parent: {fileID: 0}
