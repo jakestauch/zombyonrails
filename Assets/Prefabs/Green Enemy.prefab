@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4633194569243920}
   - component: {fileID: 33159471259149472}
   - component: {fileID: 23080973560979390}
-  - component: {fileID: 114565739835877324}
+  - component: {fileID: 65017263700225138}
   m_Layer: 0
   m_Name: Green Enemy
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1868906563980784}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 561.9, y: -9.0700035, z: 644.49}
+  m_LocalPosition: {x: 408.9502, y: 28, z: 229.7}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,16 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1868906563980784}
   m_Mesh: {fileID: 4300004, guid: ec2ed6fafcc53c64ba923b9ef7d5749f, type: 3}
---- !u!114 &114565739835877324
-MonoBehaviour:
+--- !u!65 &65017263700225138
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1868906563980784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f14014a71544a79ad6040943f6ee62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 1012212219588434, guid: fd4ca05a3617d4f7fa7e4b65e3312c11, type: 2}
-  parent: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.38488346, y: 0.5146694, z: 0.17804615}
+  m_Center: {x: 0, y: 0, z: 0}

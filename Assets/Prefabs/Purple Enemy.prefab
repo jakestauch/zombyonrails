@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4545251787962596}
   - component: {fileID: 33902861906323772}
   - component: {fileID: 23143393543593572}
-  - component: {fileID: 114051924705454424}
+  - component: {fileID: 65380599571329894}
   m_Layer: 0
   m_Name: Purple Enemy
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605233294268280}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 551.0901, y: -16.010006, z: 628.29}
+  m_LocalPosition: {x: 420.66525, y: 26.8, z: 212.5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,16 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605233294268280}
   m_Mesh: {fileID: 4300002, guid: ec2ed6fafcc53c64ba923b9ef7d5749f, type: 3}
---- !u!114 &114051924705454424
-MonoBehaviour:
+--- !u!65 &65380599571329894
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605233294268280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f14014a71544a79ad6040943f6ee62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 1012212219588434, guid: fd4ca05a3617d4f7fa7e4b65e3312c11, type: 2}
-  parent: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.64664847, y: 0.63312775, z: 0.09151077}
+  m_Center: {x: 0, y: 0, z: 0}
