@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour {
         Collider boxCollider = gameObject.AddComponent<BoxCollider>();
         boxCollider.isTrigger = false;
     }
-
+    //Test
 
     private void OnParticleCollision(GameObject other)
     {
