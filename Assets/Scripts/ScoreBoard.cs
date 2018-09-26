@@ -21,11 +21,16 @@ public class ScoreBoard : MonoBehaviour {
     {
        
     }
-    //I'VE ADDED CODE
+   
     public void ScoreHit(int hitValue)
     {
         score = score + hitValue;
         scoreText.text = score.ToString();
     }
 
+    public void ScoreDeath(int deathValue)
+    {
+        score = score + deathValue;
+        scoreText.text = score.ToString();
+    }
 }

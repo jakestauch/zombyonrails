@@ -5,8 +5,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    [SerializeField] int hitValue = 25;
-    [SerializeField] GameObject explosion;
+    [Header("Game Point System")]
+    [SerializeField] int hitPointsAwarded = 25;
+    [SerializeField] int deathPointsAwarded = 100;
+
+    [Header("Enemy Health")]
+    [SerializeField] int enemyHealth = 8;
+
+
+    [Header("Game Objects")]
+    [SerializeField] GameObject hitExplosion;
+    [SerializeField] GameObject deathExplosion;
     [SerializeField] Transform parent;
 
     ScoreBoard scoreBoard;
@@ -27,17 +36,34 @@ public class Enemy : MonoBehaviour {
         Collider boxCollider = gameObject.AddComponent<BoxCollider>();
         boxCollider.isTrigger = false;
     }
-   
-    //Test2
-    //TestB
 
     private void OnParticleCollision(GameObject other)
     {
-        GameObject fx = Instantiate(explosion, transform.position, Quaternion.identity);
-        fx.transform.parent = parent;
-        Destroy(gameObject);
-        scoreBoard.ScoreHit(hitValue);
+        HitEnemy();
+
+        if (enemyHealth <= 0)
+        {
+            KillEnemy();
+            scoreBoard.ScoreDeath(hitPointsAwarded);
+        }
+
     }
 
-   
+    private void HitEnemy()
+    {
+        enemyHealth = enemyHealth - 1;
+        GameObject hitFx = Instantiate(hitExplosion, transform.position, Quaternion.identity);
+        hitFx.transform.parent = parent;
+        scoreBoard.ScoreHit(hitPointsAwarded);
+    }
+
+    private void KillEnemy()
+    {
+        GameObject deathFx = Instantiate(deathExplosion, transform.position, Quaternion.identity);
+        deathFx.transform.parent = parent;
+
+        scoreBoard.ScoreDeath(hitPointsAwarded);
+        Destroy(gameObject);
+    }
+
 }

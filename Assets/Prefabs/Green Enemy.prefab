@@ -95,6 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f14014a71544a79ad6040943f6ee62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitValue: 25
-  explosion: {fileID: 1012212219588434, guid: fd4ca05a3617d4f7fa7e4b65e3312c11, type: 2}
+  hitPointsAwarded: 25
+  deathPointsAwarded: 100
+  healthValue: 4
+  hitHealthImpact: 1
+  hitExplosion: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c,
+    type: 2}
+  deathExplosion: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 2}
   parent: {fileID: 0}

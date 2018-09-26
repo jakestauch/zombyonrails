@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header ("General")]
+    [Header("General")]
+    [SerializeField] GameObject[] guns;
     [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 10f;
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 10f;
     [Tooltip("In m")] [SerializeField] float xRange = 5f;
@@ -26,7 +28,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
@@ -35,7 +37,8 @@ public class PlayerController : MonoBehaviour
         if (isControlEnabled)
         {
             ProcessTranslation();
-            ProcessRotation(); 
+            ProcessRotation();
+            ProcessFiring();
         }
 
     }
@@ -75,4 +78,32 @@ public class PlayerController : MonoBehaviour
         isControlEnabled = false; 
     }
 
+    void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
+    }
 }

@@ -18,6 +18,7 @@ public class CollisionHandler : MonoBehaviour
         SendMessage("OnPlayerDeath");
         deathFX.SetActive(true);
         Invoke("ReloadLevel", levelLoadDelay);
+
     }
 
     private void ReloadLevel()
