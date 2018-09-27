@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1215390438369684}
+  m_RootGameObject: {fileID: 1159941967286992}
   m_IsPrefabAsset: 1
---- !u!1 &1215390438369684
+--- !u!1 &1159941967286992
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4555850009939434}
-  - component: {fileID: 33179863187926140}
-  - component: {fileID: 23570216467724636}
-  - component: {fileID: 114071742191490978}
+  - component: {fileID: 4029675872180556}
+  - component: {fileID: 33553179548158324}
+  - component: {fileID: 23054822167909816}
+  - component: {fileID: 114012130049122716}
   m_Layer: 0
-  m_Name: Green Enemy
+  m_Name: Yellow Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4555850009939434
+--- !u!4 &4029675872180556
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1215390438369684}
+  m_GameObject: {fileID: 1159941967286992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.09, y: -0.24, z: 1.92}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23570216467724636
+--- !u!23 &23054822167909816
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1215390438369684}
+  m_GameObject: {fileID: 1159941967286992}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 46033f8dff5dea94f8173d22080fafdf, type: 2}
+  - {fileID: 2100000, guid: 96fc40aaa337f65488e24e396b30de8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,19 +77,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33179863187926140
+--- !u!33 &33553179548158324
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1215390438369684}
-  m_Mesh: {fileID: 4300002, guid: 6c11e79470dad4b4bb66b279d2660007, type: 3}
---- !u!114 &114071742191490978
+  m_GameObject: {fileID: 1159941967286992}
+  m_Mesh: {fileID: 4300006, guid: 6c11e79470dad4b4bb66b279d2660007, type: 3}
+--- !u!114 &114012130049122716
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1215390438369684}
+  m_GameObject: {fileID: 1159941967286992}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5f14014a71544a79ad6040943f6ee62, type: 3}
@@ -98,9 +98,11 @@ MonoBehaviour:
   hitPointsAwarded: 25
   deathPointsAwarded: 100
   enemyHealth: 8
-  hitExplosion: {fileID: 0}
-  deathExplosion: {fileID: 0}
+  hitExplosion: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c,
+    type: 2}
+  deathExplosion: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 2}
   parent: {fileID: 0}
-  xSpeed: 10
-  ySpeed: 50
-  zSpeed: 20
+  xSpeed: 50
+  ySpeed: 200
+  zSpeed: 5

@@ -13,9 +13,16 @@ public class SpawnEnemyWave: MonoBehaviour {
 
     [SerializeField] float spawnZOffsetMin = 200f;
     [SerializeField] float spawnZOffsetMax = 400f;
-     
-    Vector3 spawnPosition;
-    Quaternion spawnRotation; 
+
+    [SerializeField] GameObject parent;
+
+
+    Vector3 startSpawnPosition;
+    Quaternion startSpawnRotation;
+
+    float spawnXPos;
+    float spawnYPos;
+    float spawnZPos;
 
     private void Start()
 
@@ -27,25 +34,21 @@ public class SpawnEnemyWave: MonoBehaviour {
     {
         foreach (GameObject enemy in enemies)
         {
-            SetEnemySpawnTransform();
-            Instantiate(enemy, spawnPosition, spawnRotation);
+            GameObject SpawnedEnemy = Instantiate(enemy); // Spawn each enemy in array
+            SpawnedEnemy.transform.parent = transform; // Set parent transform of each enemy to Player
+            SetEnemySpawnDistance(); // Calculate random spawn position
+            SpawnedEnemy.transform.localPosition = new Vector3(spawnXPos, spawnYPos, spawnZPos); // Set spawn position to random spawn position relative to player
+            SpawnedEnemy.transform.parent = null; 
         }
     }
 
-    private void SetEnemySpawnTransform()
+ 
+    private void SetEnemySpawnDistance()
     {
-
-        Vector3 playerPosition = gameObject.transform.localPosition;
-
-        float spawnXOffset = UnityEngine.Random.Range(-spawnXOffsetRange, spawnXOffsetRange);
-        float spawnYOffset = UnityEngine.Random.Range(-spawnYOffsetMin, spawnYOffsetMax);
-        float spawnZOffset = UnityEngine.Random.Range(-spawnZOffsetMin, spawnZOffsetMax);
-
-        float spawnPosX = playerPosition.x + spawnXOffset;
-        float spawnPosY = playerPosition.y + spawnYOffset;
-        float spawnPosZ = playerPosition.z + spawnZOffset;
-
-        spawnPosition.Set(spawnPosX, spawnPosY, spawnPosZ);
+        spawnXPos = UnityEngine.Random.Range(-spawnXOffsetRange, spawnXOffsetRange);
+        spawnYPos = UnityEngine.Random.Range(spawnYOffsetMin, spawnYOffsetMax);
+        spawnZPos = UnityEngine.Random.Range(spawnZOffsetMin, spawnZOffsetMax);
     }
+
 
 }

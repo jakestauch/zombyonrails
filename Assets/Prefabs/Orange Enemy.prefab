@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1902161039353048}
+  m_RootGameObject: {fileID: 1312415465338908}
   m_IsPrefabAsset: 1
---- !u!1 &1902161039353048
+--- !u!1 &1312415465338908
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4974700414225430}
-  - component: {fileID: 33101896677520740}
-  - component: {fileID: 23649204552039072}
-  - component: {fileID: 114381102985724516}
+  - component: {fileID: 4241199802564398}
+  - component: {fileID: 33938041189734632}
+  - component: {fileID: 23318729219887310}
+  - component: {fileID: 114294006306115078}
   m_Layer: 0
-  m_Name: Plane Enemy
+  m_Name: Orange Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4974700414225430
+--- !u!4 &4241199802564398
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902161039353048}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 324.27, y: -40.99, z: 587.22003}
-  m_LocalScale: {x: 10, y: 10, z: 10.000004}
+  m_GameObject: {fileID: 1312415465338908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 270, z: 0}
---- !u!23 &23649204552039072
+  m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
+--- !u!23 &23318729219887310
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902161039353048}
+  m_GameObject: {fileID: 1312415465338908}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 79e41cf9e4ffcec479bd73a1f13912e7, type: 2}
+  - {fileID: 2100000, guid: b1bac660421f11c49a4f371aa1c78073, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,19 +77,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33101896677520740
+--- !u!33 &33938041189734632
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902161039353048}
-  m_Mesh: {fileID: 4300006, guid: ec2ed6fafcc53c64ba923b9ef7d5749f, type: 3}
---- !u!114 &114381102985724516
+  m_GameObject: {fileID: 1312415465338908}
+  m_Mesh: {fileID: 4300008, guid: 6c11e79470dad4b4bb66b279d2660007, type: 3}
+--- !u!114 &114294006306115078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902161039353048}
+  m_GameObject: {fileID: 1312415465338908}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5f14014a71544a79ad6040943f6ee62, type: 3}
@@ -98,8 +98,9 @@ MonoBehaviour:
   hitPointsAwarded: 25
   deathPointsAwarded: 100
   enemyHealth: 8
-  hitExplosion: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c,
-    type: 2}
-  deathExplosion: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
-    type: 2}
+  hitExplosion: {fileID: 0}
+  deathExplosion: {fileID: 0}
   parent: {fileID: 0}
+  xSpeed: 10
+  ySpeed: 50
+  zSpeed: 20
