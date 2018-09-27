@@ -18,17 +18,33 @@ public class Enemy : MonoBehaviour {
     [SerializeField] GameObject deathExplosion;
     [SerializeField] Transform parent;
 
+    [SerializeField] float speed = 10f; //todo add speed in different dimensions so goes down first
+    //todo set transform to local position of player
+    //todo destroy after flyby
+
     ScoreBoard scoreBoard;
+    Transform target; 
+
+    GameObject player;
     // Use this for initialization
     void Start ()
     {
         AddBoxCollider();
+        player = GameObject.Find("Player Rig");
+        target = player.transform;
+        scoreBoard = FindObjectOfType<ScoreBoard>();
+    }
+
+    private void Update()
+
+    {
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        transform.LookAt(target);
     }
 
     private void AddBoxCollider()
     {
         AddNonTriggerBoxCollider();
-        scoreBoard = FindObjectOfType<ScoreBoard>();
     }
 
     private void AddNonTriggerBoxCollider()
