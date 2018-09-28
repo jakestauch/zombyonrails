@@ -22,13 +22,14 @@ public class Enemy : MonoBehaviour {
     [SerializeField] float ySpeed = 100f;
     [SerializeField] float zSpeed = 10f;
 
+
     float xMovementPerFrame;
     float yMovementPerFrame;
     float zMovementPerFrame;
 
     ScoreBoard scoreBoard;
     Transform target; 
-    public GameObject followObject;
+    [SerializeField] GameObject followObject;
     Vector3 EnemyMovementPerFrame;
 
     // Use this for initialization

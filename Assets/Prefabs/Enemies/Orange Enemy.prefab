@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33938041189734632}
   - component: {fileID: 23318729219887310}
   - component: {fileID: 114294006306115078}
+  - component: {fileID: 65470832937825244}
+  - component: {fileID: 114596025524957640}
   m_Layer: 0
   m_Name: Orange Enemy
   m_TagString: Untagged
@@ -36,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312415465338908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.51, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,6 +86,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1312415465338908}
   m_Mesh: {fileID: 4300008, guid: 6c11e79470dad4b4bb66b279d2660007, type: 3}
+--- !u!65 &65470832937825244
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312415465338908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0626006, y: 0.96831894, z: 3.306026}
+  m_Center: {x: -0.00000023841858, y: -0.00000025331974, z: -0.000000059604645}
 --- !u!114 &114294006306115078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,10 +111,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPointsAwarded: 25
   deathPointsAwarded: 100
-  enemyHealth: 8
-  hitExplosion: {fileID: 0}
-  deathExplosion: {fileID: 0}
+  enemyHealth: 1
+  hitExplosion: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c,
+    type: 2}
+  deathExplosion: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 2}
   parent: {fileID: 0}
   xSpeed: 10
   ySpeed: 50
-  zSpeed: 20
+  zSpeed: 10
+  followObject: {fileID: 0}
+--- !u!114 &114596025524957640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312415465338908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10879b8d9eb4eb5a30b80d2ffed1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDelay: 5
