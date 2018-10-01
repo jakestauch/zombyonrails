@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        AddBoxCollider();
         followObject = GameObject.Find("Enemy Follow Target");
         target = followObject.transform;
         scoreBoard = FindObjectOfType<ScoreBoard>();
@@ -51,11 +50,7 @@ public class Enemy : MonoBehaviour {
         transform.position = new Vector3(xMovementPerFrame, yMovementPerFrame, zMovementPerFrame);
         transform.LookAt(target);
     }
-
-    private void AddBoxCollider()
-    {
-        AddNonTriggerBoxCollider();
-    }
+  
 
     private void AddNonTriggerBoxCollider()
     {

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [Tooltip("In Seconds")][SerializeField] float levelLoadDelay = 2.0f;
+    [Tooltip("In Seconds")][SerializeField] float levelLoadDelay = 0.5f;
     [Tooltip("Explosion Effect")][SerializeField] GameObject deathFX; 
 
     private void OnTriggerEnter(Collider other)
@@ -17,13 +17,13 @@ public class CollisionHandler : MonoBehaviour
     {
         SendMessage("OnPlayerDeath");
         deathFX.SetActive(true);
-        Invoke("ReloadLevel", levelLoadDelay);
+        Invoke("LoadGameOver", levelLoadDelay);
 
     }
 
-    private void ReloadLevel()
+    private void LoadGameOver()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
 }

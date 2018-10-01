@@ -13,7 +13,7 @@ public class ScoreBoard : MonoBehaviour {
 	void Start () 
     {
         scoreText = GetComponent<Text>();
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
 	}
 	
 	// Update is called once per frame
@@ -25,12 +25,17 @@ public class ScoreBoard : MonoBehaviour {
     public void ScoreHit(int hitValue)
     {
         score = score + hitValue;
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void ScoreDeath(int deathValue)
     {
         score = score + deathValue;
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
+    }
+
+    public void StoreScore()
+    {
+        PlayerPrefs.SetInt("score", score);
     }
 }

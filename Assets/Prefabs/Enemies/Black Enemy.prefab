@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114758141999902748}
   - component: {fileID: 65167692465801566}
   - component: {fileID: 114469822403990918}
+  - component: {fileID: 122597855313583928}
   m_Layer: 0
   m_Name: Black Enemy
   m_TagString: Untagged
@@ -109,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b10879b8d9eb4eb5a30b80d2ffed1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 5
+  destroyDelay: 10
 --- !u!114 &114758141999902748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,7 +130,18 @@ MonoBehaviour:
   deathExplosion: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
     type: 2}
   parent: {fileID: 0}
-  xSpeed: 10
-  ySpeed: 50
-  zSpeed: 10
+  xSpeed: 5
+  ySpeed: 25
+  zSpeed: 5
   followObject: {fileID: 0}
+--- !u!122 &122597855313583928
+Halo:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396905622642794}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_Size: 0.5

@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlRollFactor = -30f;
     [SerializeField] float controlPitchFactor = -20f;
 
+    ScoreBoard scoreBoard;
+
     float xThrow, yThrow;
     bool isControlEnabled = true;
   
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       
+        scoreBoard = FindObjectOfType<ScoreBoard>();
     }
 
     // Update is called once per frame
@@ -75,7 +77,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnPlayerDeath()
     {
-        isControlEnabled = false; 
+        isControlEnabled = false;
+        scoreBoard.StoreScore();
     }
 
     void ProcessFiring()
