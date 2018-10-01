@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.15294118, g: 0.32941177, b: 0.39215687, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogStart: 1
+  m_LinearFogEnd: 1500
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -27,8 +27,8 @@ RenderSettings:
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 5b21c6a8ce40f9641bd1204324b90b2c, type: 2}
-  m_HaloStrength: 0.5
-  m_FlareStrength: 1
+  m_HaloStrength: 0.168
+  m_FlareStrength: 0.559
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
@@ -315,8 +315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1215390438369684, guid: c4a17d88e4a124333bc98353badbab1f, type: 2}
   spawnXOffsetRange: 10
-  spawnYOffsetMin: 50
-  spawnYOffsetMax: 100
+  spawnYOffsetMin: 25
+  spawnYOffsetMax: 50
   spawnZOffsetMin: 100
   spawnZOffsetMax: 100
   playerShip: {fileID: 1567456786}
@@ -418,6 +418,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 108350313239124920, guid: 60f879758a79841e9921f3ab0d84621f,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 0.39
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60f879758a79841e9921f3ab0d84621f, type: 2}
   m_IsPrefabAsset: 0
@@ -500,8 +505,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 994796555}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 804.4482, y: 338.3508, z: -18.097109}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 804.4482, y: 338.3508, z: -18.097107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -684,8 +689,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1159941967286992, guid: 2a69d771137c2463699a78fea04d63e3, type: 2}
   spawnXOffsetRange: 10
-  spawnYOffsetMin: 50
-  spawnYOffsetMax: 100
+  spawnYOffsetMin: 25
+  spawnYOffsetMax: 50
   spawnZOffsetMin: 100
   spawnZOffsetMax: 100
   playerShip: {fileID: 1567456786}
@@ -745,8 +750,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1396905622642794, guid: 1bbe7075354264701a35a9b03acee61b, type: 2}
   spawnXOffsetRange: 10
-  spawnYOffsetMin: 50
-  spawnYOffsetMax: 100
+  spawnYOffsetMin: 25
+  spawnYOffsetMax: 50
   spawnZOffsetMin: 100
   spawnZOffsetMax: 100
   playerShip: {fileID: 1567456786}
@@ -768,6 +773,101 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1903107654990114, guid: b4115882a3643475082a9df77528313c,
     type: 2}
   m_PrefabInternal: {fileID: 1902454083}
+--- !u!82 &1567456793
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1567456786}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1b5367930a6bd4e42bf6aed9d31d56ff, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.185
+  m_Pitch: 1.19
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1626882463
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,8 +1009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1312415465338908, guid: cff83ee648eb24afb9d9d20eab3dfc8c, type: 2}
   spawnXOffsetRange: 10
-  spawnYOffsetMin: 50
-  spawnYOffsetMax: 100
+  spawnYOffsetMin: 25
+  spawnYOffsetMax: 50
   spawnZOffsetMin: 100
   spawnZOffsetMax: 100
   playerShip: {fileID: 1567456786}
@@ -1078,6 +1178,8 @@ PlayableDirector:
   - key: {fileID: 114676556181833690, guid: 9df84635327154d31ba3c97ffe929c14, type: 2}
     value: {fileID: 413027513}
   - key: {fileID: 0}
+    value: {fileID: 994796555}
+  - key: {fileID: 114845122285342480, guid: 9df84635327154d31ba3c97ffe929c14, type: 2}
     value: {fileID: 994796555}
   m_ExposedReferences:
     m_References: []
@@ -1266,8 +1368,47 @@ Prefab:
       propertyPath: m_Size.x
       value: 1.97
       objectReference: {fileID: 0}
+    - target: {fileID: 114225339120658598, guid: b4115882a3643475082a9df77528313c,
+        type: 2}
+      propertyPath: levelLoadDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82533850616607130, guid: b4115882a3643475082a9df77528313c,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a44539c68d4f4591bbb2b8229b53ca6, type: 3}
+    - target: {fileID: 1124066408607918, guid: b4115882a3643475082a9df77528313c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247166394817358, guid: b4115882a3643475082a9df77528313c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198669001089690024, guid: b4115882a3643475082a9df77528313c,
+        type: 2}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198223284431250994, guid: b4115882a3643475082a9df77528313c,
+        type: 2}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82634204424781522, guid: b4115882a3643475082a9df77528313c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82634204424781522, guid: b4115882a3643475082a9df77528313c,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114191473732110784, guid: b4115882a3643475082a9df77528313c, type: 2}
+    - {fileID: 82634204424781522, guid: b4115882a3643475082a9df77528313c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b4115882a3643475082a9df77528313c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2035829641
